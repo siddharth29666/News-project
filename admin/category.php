@@ -15,7 +15,7 @@
             include "config.php";
 
             
-            include "config.php";
+            // include "config.php";
             $limit= 3;
             if(isset($_GET['page'])){
                 $page = $_GET['page'];

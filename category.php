@@ -18,7 +18,9 @@
                 }
 
 
-                $sql1="SELECT * FROM category WHERE category_id = $cat_id";
+                $sql1="SELECT * FROM category WHERE category_id = {$cat_id}";
+                // echo $sql1;
+                // die();
                 $result1= mysqli_query($conn,$sql1)or die("query Failed.");
                 $row1 = mysqli_fetch_assoc($result1);
 
@@ -65,7 +67,7 @@
                                 <div class="post-information">
                                     <span>
                                         <i class="fa fa-tags" aria-hidden="true"></i>
-                                        <a href='category.php'><?php echo $row['category_name']; ?></a>
+                                        <a href='category.php?cid=<?php echo $row['category']; ?>'><?php echo $row['category_name']; ?></a>
                                     </span>
                                     <span>
                                         <i class="fa fa-user" aria-hidden="true"></i>
